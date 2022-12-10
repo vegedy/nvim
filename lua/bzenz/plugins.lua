@@ -49,6 +49,12 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
 
+  use {'nvim-treesitter/nvim-treesitter'}
+  use {'nvim-orgmode/orgmode', config = function()
+    require('orgmode').setup{}
+  end
+  } 
+
 -- Colorschemes
   use "lunarvim/darkplus.nvim" 
 
