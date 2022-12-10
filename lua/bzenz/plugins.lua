@@ -49,7 +49,7 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
 
-  use {'nvim-treesitter/nvim-treesitter'}
+  use {'nvim-treesitter/nvim-treesitter'} -- Syntax highlighter
   use {'nvim-orgmode/orgmode', config = function()
     -- Load custom treesitter grammar for org filetype
     require('orgmode').setup_ts_grammar()
@@ -62,8 +62,19 @@ return packer.startup(function(use)
   end
   } 
 
--- Colorschemes
+  -- Colorschemes
   use "lunarvim/darkplus.nvim" 
+
+  -- cmp plugins
+  use "hrsh7th/nvim-cmp" -- The completion plugin
+  use "hrsh7th/cmp-buffer" -- buffer completions
+  use "hrsh7th/cmp-path" -- path completions
+  use "hrsh7th/cmp-cmdline" -- cmdline completions
+  use "saadparwaiz1/cmp_luasnip" -- snippet completions
+
+  -- snippets
+  use "L3MON4D3/LuaSnip" --snippet engine
+  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
 
 
