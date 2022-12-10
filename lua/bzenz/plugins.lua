@@ -51,7 +51,14 @@ return packer.startup(function(use)
 
   use {'nvim-treesitter/nvim-treesitter'}
   use {'nvim-orgmode/orgmode', config = function()
-    require('orgmode').setup{}
+    -- Load custom treesitter grammar for org filetype
+    require('orgmode').setup_ts_grammar()
+
+    require('orgmode').setup({
+      org_agenda_files = {'~/org/*', '~/org/**/*'},
+      org_default_notes_file = '~/org/refile.org',
+    })
+
   end
   } 
 
