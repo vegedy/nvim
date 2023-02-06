@@ -6,4 +6,5 @@ require "bzenz.colorscheme"
 require "bzenz.treesitter"
 require "bzenz.cmp"
 require "bzenz.lsp"
+require "bzenz.telescope"
 

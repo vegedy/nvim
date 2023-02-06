@@ -78,13 +78,15 @@ return packer.startup(function(use)
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
-  
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/mason.nvim" -- simple to use language server installer
   use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
   use 'jose-elias-alvarez/null-ls.nvim' -- LSP diagnostics and code actions
 
+  -- Telescope
+  use "nvim-telescope/telescope.nvim"
+  use 'nvim-telescope/telescope-media-files.nvim'
 
 
 
