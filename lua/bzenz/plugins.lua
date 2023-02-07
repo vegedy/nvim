@@ -49,21 +49,8 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
 
-  use {'nvim-treesitter/nvim-treesitter'} -- Syntax highlighter
-  use {'nvim-orgmode/orgmode', config = function()
-    -- Load custom treesitter grammar for org filetype
-    require('orgmode').setup_ts_grammar()
-
-    require('orgmode').setup({
-      org_agenda_files = {'~/org/*', '~/org/**/*'},
-      org_default_notes_file = '~/org/refile.org',
-    })
-
-  end
-  } 
-
   -- Colorschemes
-  use "lunarvim/darkplus.nvim" 
+  use "lunarvim/darkplus.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -92,6 +79,21 @@ return packer.startup(function(use)
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+  use {'nvim-orgmode/orgmode', config = function()
+    -- Load custom treesitter grammar for org filetype
+    require('orgmode').setup_ts_grammar()
+    require('orgmode').setup({
+      org_agenda_files = {'~/org/*', '~/org/**/*'},
+      org_default_notes_file = '~/org/refile.org',
+    })
+  end
   }
 
 
