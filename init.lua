@@ -8,3 +8,5 @@ require "bzenz.cmp"
 require "bzenz.lsp"
 require "bzenz.telescope"
 
+require('lualine').setup()
+
