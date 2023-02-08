@@ -8,6 +8,7 @@ local servers = {
 	"jsonls",
 	"omnisharp",
 	-- "csharp_ls",
+	"texlab",
 	-- "yamlls",
 }
 

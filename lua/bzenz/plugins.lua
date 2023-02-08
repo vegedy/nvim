@@ -96,6 +96,9 @@ return packer.startup(function(use)
   end
   }
 
+  -- Latex
+  use 'lervag/vimtex'
+
 
 
 

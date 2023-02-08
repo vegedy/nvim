@@ -8,4 +8,5 @@ require "bzenz.lsp"
 require "bzenz.telescope"
 require "bzenz.lualine"
 require "bzenz.treesitter"
+require "bzenz.vimtex"
 
