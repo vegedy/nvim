@@ -9,4 +9,5 @@ require "bzenz.telescope"
 require "bzenz.lualine"
 require "bzenz.treesitter"
 require "bzenz.vimtex"
+require "bzenz.bufferline"
 
