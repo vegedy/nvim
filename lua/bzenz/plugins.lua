@@ -102,6 +102,8 @@ return packer.startup(function(use)
   -- Bufferline
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
+  -- Web Devicons
+  use 'nvim-tree/nvim-web-devicons'
 
 
   -- Automatically set up your configuration after cloning packer.nvim
