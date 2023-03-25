@@ -10,4 +10,5 @@ require "bzenz.lualine"
 require "bzenz.treesitter"
 require "bzenz.vimtex"
 require "bzenz.bufferline"
+require "bzenz.autopairs"
 
