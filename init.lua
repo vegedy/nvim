@@ -11,4 +11,5 @@ require "bzenz.treesitter"
 require "bzenz.vimtex"
 require "bzenz.bufferline"
 require "bzenz.autopairs"
+require "bzenz.comment"
 

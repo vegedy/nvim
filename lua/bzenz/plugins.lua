@@ -49,6 +49,7 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+  use "numToStr/Comment.nvim" -- Easily comment stuff
 
   -- Colorschemes
   use "lunarvim/darkplus.nvim"
@@ -94,8 +95,8 @@ return packer.startup(function(use)
       org_agenda_files = {'~/org/*', '~/org/**/*'},
       org_default_notes_file = '~/org/refile.org',
     })
-  end
-  }
+  end;
+  use 'JoosepAlviste/nvim-ts-context-commentstring' }
 
   -- Latex
   use 'lervag/vimtex'
