@@ -113,6 +113,7 @@ cmp.setup {
   sources = {
     { name = "nvim_lua" },
     { name = "nvim_lsp" },
+    { name = "obsidian" },
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
