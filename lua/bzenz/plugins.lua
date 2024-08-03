@@ -48,6 +48,9 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
+  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+  use 'kyazdani42/nvim-web-devicons' -- File icons
+  use 'kyazdani42/nvim-tree.lua' use "numToStr/Comment.nvim" -- Easily comment stuff
 
   -- Colorschemes
   use "lunarvim/darkplus.nvim"
@@ -93,8 +96,8 @@ return packer.startup(function(use)
       org_agenda_files = {'~/org/*', '~/org/**/*'},
       org_default_notes_file = '~/org/refile.org',
     })
-  end
-  }
+  end;
+  use 'JoosepAlviste/nvim-ts-context-commentstring' }
 
   -- Latex
   use 'lervag/vimtex'
@@ -102,9 +105,17 @@ return packer.startup(function(use)
   -- Bufferline
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
-  -- Web Devicons
-  use 'nvim-tree/nvim-web-devicons'
+  -- Git
+  use "lewis6991/gitsigns.nvim"
 
+  -- Obsidian
+  use({
+    "epwalsh/obsidian.nvim",
+    requires = {
+      -- Required.
+      "nvim-lua/plenary.nvim",
+    },
+  })
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
