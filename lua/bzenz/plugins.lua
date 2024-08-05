@@ -54,6 +54,7 @@ return packer.startup(function(use)
 
   -- Colorschemes
   use "lunarvim/darkplus.nvim"
+  use { 'uZer/pywal16.nvim', as = 'pywal16' }
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -89,15 +90,6 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-  use {'nvim-orgmode/orgmode', config = function()
-    -- Load custom treesitter grammar for org filetype
-    require('orgmode').setup_ts_grammar()
-    require('orgmode').setup({
-      org_agenda_files = {'~/org/*', '~/org/**/*'},
-      org_default_notes_file = '~/org/refile.org',
-    })
-  end;
-  use 'JoosepAlviste/nvim-ts-context-commentstring' }
 
   -- Latex
   use 'lervag/vimtex'
@@ -108,14 +100,7 @@ return packer.startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
 
-  -- Obsidian
-  use({
-    "epwalsh/obsidian.nvim",
-    requires = {
-      -- Required.
-      "nvim-lua/plenary.nvim",
-    },
-  })
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

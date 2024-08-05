@@ -2,7 +2,7 @@
 -- Treesitter configuration
 require('nvim-treesitter.configs').setup {
   ensure_installed = "all",
-  sync_install = true,
+  sync_install = false,
   ignore_install = { "phpdoc", "verilog", "cmake", "svelte" }, -- List of parsers to ignore installing
   autopairs = {
     enable = true,
