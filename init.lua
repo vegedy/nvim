@@ -2,8 +2,8 @@
 require "bzenz.options"
 require "bzenz.keymaps"
 require "bzenz.plugins"
-require "bzenz.colorscheme"
-require "bzenz.pywal16"
+--[[ require "bzenz.colorscheme" ]]
+--[[ require "bzenz.pywal16" ]]
 require "bzenz.cmp"
 require "bzenz.lsp"
 require "bzenz.telescope"

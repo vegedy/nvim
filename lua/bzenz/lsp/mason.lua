@@ -1,7 +1,7 @@
 local servers = {
 	"html",
 	"cssls",
-	"tsserver",
+	"ts_ls",
 	"volar",
 	"jsonls",
 	-- "yamlls",
