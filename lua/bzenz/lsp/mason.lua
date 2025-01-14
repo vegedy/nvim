@@ -3,7 +3,7 @@ local servers = {
 	"cssls",
 	"ts_ls",
 	"volar",
-	"jsonls",
+	-- "jsonls",
 	-- "yamlls",
 
 	"omnisharp",
@@ -13,7 +13,7 @@ local servers = {
   "clangd",
 	"pyright",
 	"bashls",
-	"texlab",
+	-- "texlab",
 }
 
 local settings = {

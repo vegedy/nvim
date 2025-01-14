@@ -1,3 +1,0 @@
--- vimtex configuration
---require('vimtex')
-

@@ -55,6 +55,7 @@ return packer.startup(function(use)
   -- Colorschemes
   use "lunarvim/darkplus.nvim"
   use { 'uZer/pywal16.nvim', as = 'pywal16' }
+  use 'ellisonleao/gruvbox.nvim'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -92,13 +93,26 @@ return packer.startup(function(use)
   }
 
   -- Latex
-  use 'lervag/vimtex'
+  -- use 'vim-latex/vim-latex'
 
   -- Bufferline
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
   -- Git
   use "lewis6991/gitsigns.nvim"
+
+  -- Yazi
+  use {
+    'mikavilpas/yazi.nvim',
+    config = function()
+      require('yazi').setup({
+        open_for_directories = false,
+        keymaps = {
+          show_help = '<f1>',
+        },
+      })
+    end
+  }
 
 
 
