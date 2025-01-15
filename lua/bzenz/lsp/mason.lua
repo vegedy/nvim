@@ -14,6 +14,7 @@ local servers = {
 	"pyright",
 	"bashls",
 	-- "texlab",
+  "ltex",
 }
 
 local settings = {
