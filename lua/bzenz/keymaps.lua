@@ -63,6 +63,9 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 -- Disable highlight
 keymap("n", "<ESC>", ":nohlsearch<CR>", opts)
 
+-- Rename symbols
+keymap("n", "r", ":lua Rename()<CR>", opts)
+
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
