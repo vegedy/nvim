@@ -15,4 +15,5 @@ require "bzenz.autopairs"
 require "bzenz.comment"
 require "bzenz.gitsigns"
 require "bzenz.nvim-tree"
+require "bzenz.rename"
 
