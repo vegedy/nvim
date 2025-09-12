@@ -39,9 +39,9 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<C-CR>", ":s/TODO/DONE/<CR>", opts)
 
 -- Yazi
-keymap("n", "<leader>-", "<cmd>Yazi<cr>", opts) -- Öffne yazi am aktuellen Dateistandort
-keymap("n", "<leader>cw", "<cmd>Yazi cwd<cr>", opts) -- Öffne den Dateimanager im aktuellen Arbeitsverzeichnis
-keymap("n", "<c-up>", "<cmd>Yazi toggle<cr>", opts) -- Letzte yazi-Sitzung fortsetzen
+--keymap("n", "<leader>-", "<cmd>Yazi<cr>", opts) -- Öffne yazi am aktuellen Dateistandort
+--keymap("n", "<leader>cw", "<cmd>Yazi cwd<cr>", opts) -- Öffne den Dateimanager im aktuellen Arbeitsverzeichnis
+--keymap("n", "<c-up>", "<cmd>Yazi toggle<cr>", opts) -- Letzte yazi-Sitzung fortsetzen
 
 -- Compile and view latex files
 vim.api.nvim_create_autocmd("FileType", {

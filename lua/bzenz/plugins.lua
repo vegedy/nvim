@@ -56,6 +56,7 @@ return packer.startup(function(use)
   use "lunarvim/darkplus.nvim"
   use { 'uZer/pywal16.nvim', as = 'pywal16' }
   use 'ellisonleao/gruvbox.nvim'
+  use 'marko-cerovac/material.nvim'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -102,17 +103,17 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"
 
   -- Yazi
-  use {
-    'mikavilpas/yazi.nvim',
-    config = function()
-      require('yazi').setup({
-        open_for_directories = false,
-        keymaps = {
-          show_help = '<f1>',
-        },
-      })
-    end
-  }
+--  use {
+--    'mikavilpas/yazi.nvim',
+--    config = function()
+--      require('yazi').setup({
+--        open_for_directories = false,
+--        keymaps = {
+--          show_help = '<f1>',
+--        },
+--      })
+--    end
+--  }
 
 
 
