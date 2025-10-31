@@ -5,7 +5,7 @@ return {
     "mason-org/mason-lspconfig.nvim",
     dependencies = { "mason-org/mason.nvim", "neovim/nvim-lspconfig" },
     opts = {
-      ensure_installed = { "lua_ls","pyright","bashls","jsonls","yamlls","texlab","tinymist" },
+      ensure_installed = { "lua_ls","pyright","bashls","jsonls","texlab","tinymist" },
       automatic_installation = true,
     },
   },
