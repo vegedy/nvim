@@ -8,4 +8,6 @@ o.clipboard = "unnamedplus"
 o.splitright, o.splitbelow = true, true
 o.ignorecase, o.smartcase = true, true
 o.completeopt = "menu,menuone,noselect"
+vim.opt.textwidth = 80
+vim.opt.formatoptions:append("l")
 
