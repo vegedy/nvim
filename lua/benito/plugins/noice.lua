@@ -2,7 +2,14 @@ return {
   "folke/noice.nvim",
   dependencies = {
     "MunifTanjim/nui.nvim",
-    "rcarriga/nvim-notify",
+    {
+      "rcarriga/nvim-notify",
+      opts = {
+        background_colour = function()
+          return require("benito.xrdb").get_colors().bg
+        end,
+      },
+    },
   },
   config = function()
     require("noice").setup({
