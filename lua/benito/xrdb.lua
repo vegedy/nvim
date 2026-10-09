@@ -471,6 +471,7 @@ end
 
 function M.load()
   local colors = M.get_colors()
+  local transparent = vim.g.xrdb_transparent ~= false
 
   vim.cmd("highlight clear")
   if vim.fn.exists("syntax_on") then
@@ -495,7 +496,9 @@ function M.load()
       opts.fg = colors[spec.fg]
       opts.ctermfg = idx[spec.fg]
     end
-    if spec.bg then
+    -- Leave the base background unset so the terminal's opacity shows through.
+    -- Keep shaded and accent backgrounds for cursor lines, popups and selections.
+    if spec.bg and not (transparent and spec.bg == "bg") then
       opts.bg = colors[spec.bg]
       opts.ctermbg = idx[spec.bg]
     end

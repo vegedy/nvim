@@ -1,7 +1,8 @@
 local c = require("benito.xrdb").get_colors()
+local base_bg = vim.g.xrdb_transparent ~= false and "NONE" or c.bg
 
 local b = { bg = c.bg2, fg = c.fg }
-local base = { bg = c.bg, fg = c.fg }
+local base = { bg = base_bg, fg = c.fg }
 
 local theme = {
   normal = {
@@ -30,9 +31,9 @@ local theme = {
     c = base,
   },
   inactive = {
-    a = { bg = c.bg, fg = c.color8 },
-    b = { bg = c.bg, fg = c.color8 },
-    c = { bg = c.bg, fg = c.color8 },
+    a = { bg = base_bg, fg = c.color8 },
+    b = { bg = base_bg, fg = c.color8 },
+    c = { bg = base_bg, fg = c.color8 },
   },
 }
 theme.terminal = theme.command
