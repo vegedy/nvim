@@ -13,6 +13,23 @@ return {
             max_level = 5,
             use_outline_path = "file",
         },
+        ui = {
+            bullets = { "◉", "○", "✸", "✿" },
+            checkboxes = { " ", "◐", "✓" },
+
+            -- Visuelle Darstellung
+            indent_mode = true,
+            indent_indentation_per_level = 2,
+            conceal_links = true,
+            hide_emphasis_markers = true,
+
+            -- Aufgaben
+            fontify_done_headline = true,
+            fontify_todo_headline = false,
+
+            -- Codeblöcke
+            src_highlight = true,
+        },
     },
 }
 
