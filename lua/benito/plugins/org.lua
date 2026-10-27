@@ -69,14 +69,28 @@ return {
             group = group,
             callback = applyHighlights,
         })
-        vim.api.nvim_create_autocmd("FileType", {
-            pattern = "org",
-            callback = function()
+        vim.api.nvim_create_autocmd({ "FileType", "BufWinEnter" }, {
+            group = vim.api.nvim_create_augroup("OrgWindowOptions", { clear = true }),
+            callback = function(args)
+                if vim.bo[args.buf].filetype ~= "org" then
+                    return
+                end
+
                 vim.opt_local.cursorline = true
-                vim.opt_local.wrap = true
+                vim.opt_local.wrap = false
                 vim.opt_local.linebreak = true
                 vim.opt_local.number = false
                 vim.opt_local.relativenumber = false
+
+                -- org.nvim's indent mode enables wrap in its BufWinEnter handler.
+                local win = vim.api.nvim_get_current_win()
+                vim.schedule(function()
+                    if vim.api.nvim_win_is_valid(win)
+                        and vim.api.nvim_win_get_buf(win) == args.buf
+                        and vim.bo[args.buf].filetype == "org" then
+                        vim.wo[win][0].wrap = false
+                    end
+                end)
             end,
         })
 
