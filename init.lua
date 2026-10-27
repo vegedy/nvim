@@ -15,3 +15,14 @@ require("lazy").setup({
   change_detection = { notify = false },
 })
 
+local config_dir = vim.fn.stdpath("config") .. "/lua/benito/config"
+local config_files = vim.fn.globpath(config_dir, "**/*.lua", false, true)
+table.sort(config_files)
+
+for _, file in ipairs(config_files) do
+  local module = "benito.config." .. file:sub(#config_dir + 2)
+    :gsub("%.lua$", "")
+    :gsub("/", ".")
+  module = module:gsub("%.init$", "")
+  require(module).setup()
+end
